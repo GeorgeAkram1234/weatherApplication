@@ -1,0 +1,111 @@
+
+nav {
+    background-color: #1E202B !important;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center;
+}
+
+nav li {
+    position: relative;
+}
+
+nav li::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 2px solid #09c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav li:hover::after{
+    opacity: 1;
+}
+nav li a{
+    transition: all 0.3s;
+}
+nav li:hover a{
+    color: #09c !important;
+}
+
+.nav-item {
+    font-size: 14px !important;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1 ), rgba(0, 0, 0, 0.1)), url(images/banner.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #1E202B;
+}
+
+input{
+    background-color: #1E202B !important;
+    border: 0px !important;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 .25rem rgba(0 , 0 , 0 , 0);
+}
+.form-control::placeholder {
+    color: gray !important;
+    padding-left: 10px;
+}
+
+button{
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background-color: #09c !important;
+}
+.card{
+    background-color: #1E202B !important;
+    color: white !important;
+}
+.card:nth-child(1){
+    background-color: #262936 !important;
+}
+.card:nth-child(3){
+    background-color: #262936 !important;
+}
+#weather{
+    font-size: 72px;
+}
+#sec-day-weather{
+    font-size: 40px;
+}
+#third-day-weather{
+    font-size: 40px;
+}
+footer{
+    background-color: #262936 !important;
+}
+footer ul li a{
+    transition: all 0.3s;
+
+}
+footer ul li{
+    background-color: #1E202B;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+footer ul li:hover{
+    background-color: #09c !important;
+}
+footer ul li:hover a{
+    color: white !important;
+}
