@@ -1,22 +1,19 @@
-
-let searchInput = document.querySelector('#searchInput')
-let city = document.querySelector('#city')
-let weather = document.querySelector('#weather')
-let icon = document.querySelector('#icon')
-let condition = document.querySelector('#condition')
-let humidity = document.querySelector('#humidity')
-let wind_speed = document.querySelector('#wind-speed')
-let direction = document.querySelector('#direction')
-let sec_day_icon = document.querySelector('#sec-day-icon')
-let sec_day_weather = document.querySelector('#sec-day-weather')
-let sec_day_note = document.querySelector('#sec-day-note')
-let sec_day_condition = document.querySelector('#sec-day-condition')
-let third_day_icon = document.querySelector('#third-day-icon')
-let third_day_weather = document.querySelector('#third-day-weather')
-let third_day_note = document.querySelector('#third-day-note')
-let third_day_condition = document.querySelector('#third-day-condition')
-
-
+let searchInput = document.querySelector('#searchInput');
+let city = document.querySelector('#city');
+let weather = document.querySelector('#weather');
+let icon = document.querySelector('#icon');
+let condition = document.querySelector('#condition');
+let humidity = document.querySelector('#humidity');
+let wind_speed = document.querySelector('#wind-speed');
+let direction = document.querySelector('#direction');
+let sec_day_icon = document.querySelector('#sec-day-icon');
+let sec_day_weather = document.querySelector('#sec-day-weather');
+let sec_day_note = document.querySelector('#sec-day-note');
+let sec_day_condition = document.querySelector('#sec-day-condition');
+let third_day_icon = document.querySelector('#third-day-icon');
+let third_day_weather = document.querySelector('#third-day-weather');
+let third_day_note = document.querySelector('#third-day-note');
+let third_day_condition = document.querySelector('#third-day-condition');
 
 let today = new Date();
 
@@ -30,17 +27,13 @@ let dayNames = [
 
 let dayIndex = today.getDay();
 let dayName = dayNames[dayIndex];
+let monthName = monthNames[today.getMonth()];
+let dayOfMonth = today.getDate();
 
-let monthIndex = today.getMonth();
-let monthName = monthNames[monthIndex];
-
-
-document.getElementById('dayName').innerHTML = `${dayName}`
-document.getElementById('date').innerHTML = `${dayIndex}${monthName}`
-
-document.getElementById('sec-day').innerHTML = `${dayNames[dayIndex + 1]}`
-document.getElementById('third-day').innerHTML = `${dayNames[dayIndex + 2]}`
-
+document.getElementById('dayName').innerHTML = `${dayName}`;
+document.getElementById('date').innerHTML = `${dayOfMonth} ${monthName}`;
+document.getElementById('sec-day').innerHTML = dayNames[(dayIndex + 1) % 7];
+document.getElementById('third-day').innerHTML = dayNames[(dayIndex + 2) % 7];
 
 
 async function getAllWeather(location) {
